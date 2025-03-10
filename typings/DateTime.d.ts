@@ -5,6 +5,7 @@
 //                 Karol Janyst <http://github.com/LKay>,
 //                 Javier Marquez <javi@arqex.com>
 
+import * as React from "react";
 import { Component, ChangeEvent, FocusEvent, FocusEventHandler } from 'react';
 import { Moment } from 'moment';
 
@@ -155,33 +156,33 @@ declare namespace ReactDatetimeClass {
          view of react-datetime, this way it's possible to wrap the original view adding our own markup or
          override it completely with our own code.
         */
-        renderView?: (viewMode: string, renderCalendar: Function) => JSX.Element;
+        renderView?: (viewMode: string, renderCalendar: Function) => React.JSX.Element;
         /*
          Customize the way that the days are shown in the day picker. The accepted function has
          the selectedDate, the current date and the default calculated props for the cell,
          and must return a React component. See appearance customization
          */
-        renderDay?: (props: any, currentDate: any, selectedDate: any) => JSX.Element;
+        renderDay?: (props: any, currentDate: any, selectedDate: any) => React.JSX.Element;
         /*
          Customize the way that the months are shown in the month picker.
          The accepted function has the selectedDate, the current date and the default calculated
          props for the cell, the month and the year to be shown, and must return a
          React component. See appearance customization
          */
-        renderMonth?: (props: any, month: number, year: number, selectedDate: any) => JSX.Element;
+        renderMonth?: (props: any, month: number, year: number, selectedDate: any) => React.JSX.Element;
         /*
          Customize the way that the years are shown in the year picker.
          The accepted function has the selectedDate, the current date and the default calculated
          props for the cell, the year to be shown, and must return a React component.
          See appearance customization
          */
-        renderYear?: (props: any, year: number, selectedDate: any) => JSX.Element;
+        renderYear?: (props: any, year: number, selectedDate: any) => React.JSX.Element;
         /*
          Replace the rendering of the input element. The accepted function has openCalendar
          (a function which opens the calendar) and the default calculated props for the input.
          Must return a React component or null.
          */
-        renderInput?: (props: any, openCalendar: Function, closeCalendar: Function) => JSX.Element;
+        renderInput?: (props: any, openCalendar: Function, closeCalendar: Function) => React.JSX.Element;
         /*
          Whether to use moment's strict parsing when parsing input.
          */
